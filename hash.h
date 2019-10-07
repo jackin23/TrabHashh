@@ -4,7 +4,7 @@ typedef struct buckets{
 	int qtd;
 	int NBucket;
 }Buckets;
-
+printf ("meus amigos empataram a foda");
 typedef struct hash{
 	int profundidade;
 	Buckets **lista;
