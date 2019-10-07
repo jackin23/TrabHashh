@@ -2,7 +2,7 @@
 #include<stdlib.h>
 #include"hash.h"
 
-// Criar para apontar para o mesmo bucker
+printf ("quero camisa");// Criar para apontar para o mesmo bucker
 
 Hash* cria_Hash(){
 	Hash* ha = (Hash*)malloc(sizeof(Hash));
@@ -95,12 +95,12 @@ int insere_Hash(Hash *ha, int valor){
 	if(ha->lista[pos]->qtd == 4){
 
 		if(ha->lista[pos]->profundidadeLocal < ha->profundidade){
-			//multiplas conexıes
+			//multiplas conex√µes
 
 			int NConexoes = exponencial(2,(ha->profundidade - ha->lista[pos]->profundidadeLocal));
 			// guardar em um vetor os valores do bucket atual
 			// limpar bucket atual
-			// criar novo bucket nas novas posiÁıes
+			// criar novo bucket nas novas posi√ß√µes
 			// armazenar valores do vetor
 			// armazenar o novo valor
 
@@ -130,12 +130,12 @@ int insere_Hash(Hash *ha, int valor){
 		}
 
 		if(ha->lista[pos]->profundidadeLocal == ha->profundidade){
-			// pegar todos os enderÁos
+			// pegar todos os ender√ßos
 			// expandir hash hash
-			// redistribuir os endereÁos
+			// redistribuir os endere√ßos
 			// limpar bucket
 			// criar novo bucket
-			// substituir um dos endereÁoes de bucket
+			// substituir um dos endere√ßoes de bucket
 
 			int NConexoes;
 
@@ -272,7 +272,7 @@ int imprimiValores(Hash *ha){
 	for(i = 0; (i < count) && (Nbu != 0); i++){
 		if(vetorTeste[ha->lista[i]->NBucket-1] != ha->lista[i]->NBucket){
 			for(j = 0; j < ha->lista[i]->qtd; j++){
-				printf("%d™ valor do Bucket %d: %d.\n",j+1,ha->lista[i]->NBucket,ha->lista[i]->valor[j]);
+				printf("%d¬™ valor do Bucket %d: %d.\n",j+1,ha->lista[i]->NBucket,ha->lista[i]->valor[j]);
 			}
 			vetorTeste[ha->lista[i]->NBucket-1] = ha->lista[i]->NBucket;
 			Nbu--;
@@ -326,5 +326,5 @@ int remocao_Elemento(Hash *ha, int valor){
 		}
 	}
 
-	return 0; // n„o tinha o elemento
+	return 0; // n√£o tinha o elemento
 }
